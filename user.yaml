@@ -1,0 +1,8 @@
+---
+- name: this playbook crete user
+  hosts: web
+  become: true
+  tasks:
+  - name: Creating a user rohit
+    user:
+     name: rohit

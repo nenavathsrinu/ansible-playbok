@@ -1,0 +1,9 @@
+---
+- name: this playbook installe git package
+  hosts: web
+  become: true
+  tasks: 
+  - name: installing git package
+    yum:
+      name: tree
+      state: removed

@@ -1,0 +1,13 @@
+---
+- name: this playboook install httpd package and start the service
+  hosts: web
+  become: true
+  tasks:
+  - name: installing packages httpd
+    yum: 
+      name: httpd
+      state: installed
+  - name: httpd services starting
+    service:
+      name: httpd
+      state: started

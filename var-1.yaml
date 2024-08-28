@@ -1,0 +1,11 @@
+---
+- name: Create User
+  hosts: web
+  become: true
+  vars_files:
+  - usr.yaml
+
+  tasks : 
+  - name: Creating a user {{user}}
+    user:
+      name: "{{user}}"
